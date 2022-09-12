@@ -23,3 +23,11 @@ body {
 .content {
   padding: 0 16px;
 }
+
+/* if device >= 1024px */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 80rem;
+    margin: 8px auto;
+  }
+}
