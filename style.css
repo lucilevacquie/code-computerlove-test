@@ -14,10 +14,15 @@ body {
 
 .tab {
   padding: 16px;
+  border-top: 2px solid transparent;
 }
 
 .tab:hover {
   background-color: lightblue;
+}
+
+.tab.active {
+  border-top: 2px solid teal;
 }
 
 .content {
