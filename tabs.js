@@ -15,6 +15,6 @@ function onTabClick(event) {
 }
 
 //get the tabs element
-const element = document.getElementsByClassName('tabs');
+const element = document.getElementById('tab-wrapper');
 //trigger onTabClick on click of the element
 element.addEventListener('click', onTabClick, false);

@@ -8,7 +8,7 @@ body {
   border: 1px solid lightslategray;
 }
 
-.tab-wrapper {
+#tab-wrapper {
   display: inline-flex;
 }
 
