@@ -21,6 +21,11 @@ body {
 }
 
 .content {
+  display: none;
+}
+
+.content.active {
+  display: block;
   padding: 0 16px;
 }
 
