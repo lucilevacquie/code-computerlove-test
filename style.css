@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 8px;
+  padding: 16px;
+  border: 1px solid lightslategray;
+}
+
+.tab-wrapper {
+  display: inline-flex;
+}
+
+.tab {
+  padding: 16px;
+}
+
+.tab:hover {
+  background-color: lightblue;
+}
+
+.content {
+  padding: 0 16px;
+}
