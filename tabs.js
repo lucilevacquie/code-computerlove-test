@@ -13,3 +13,8 @@ function onTabClick(event) {
     //and add the 'active' class to the coresponding content element
     document.getElementById(event.target.id.split('button-')[1]).className += ' active';
 }
+
+//get the tabs element
+const element = document.getElementsByClassName('tabs');
+//trigger onTabClick on click of the element
+element.addEventListener('click', onTabClick, false);
