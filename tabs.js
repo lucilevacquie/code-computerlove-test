@@ -1,6 +1,6 @@
 function onTabClick(event) {
     //class 'active' on the selected tab/content (first tab by default)
-    let activeTab = document.querySelector('.active');
+    let activeTab = document.querySelectorAll('.active');
 
     //first, remove the active class that already exists
     //loop through all the tabs and replace 'active' by empty string
@@ -16,6 +16,5 @@ function onTabClick(event) {
 
 //get the tabs element
 const element = document.getElementById('tab-wrapper');
-console.log(element)
 //trigger onTabClick on click of the element
 element.addEventListener('click', onTabClick, false);
