@@ -11,6 +11,8 @@ body {
 #tab-wrapper {
   display: inline-flex;
   flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
 }
 
 .tab {
