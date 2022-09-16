@@ -29,12 +29,12 @@ body {
   background-color: white;
 }
 
-.mobile-content {
+#mobile-content {
   display: none;
   padding: 16px;
 }
 
-.mobile-content.show {
+#mobile-content.show {
   display: block;
 }
 
@@ -61,7 +61,7 @@ body {
     border-bottom: 0;
   }
 
-  .mobile-content {
+  #mobile-content {
     display: none !important;
   }
 

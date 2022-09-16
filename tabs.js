@@ -51,15 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
             newTab.className += ' active';
             newTab.setAttribute('aria-selected', true);
 
-            // append the mobile content after the active tab
-            newTab.after(mobileContent);
-            // display tab content
+            // MOBILE
+            // set tab content
             mobileContent.className += ' show';
-
-            // set tab content for mobile
             mobileContent.innerHTML = tabItem.content;
+            newTab.after(mobileContent);
 
-            // set tab content for tablet/desktop
+            // LAPTOP
+            // set tab content
             content.innerHTML = tabItem.content;
         })
 
