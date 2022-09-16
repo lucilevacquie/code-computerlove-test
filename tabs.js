@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // set the default content to the first tab content
     content.innerHTML = data.tab1.content;
 
-    Object.keys(data).forEach(id => {
+    mobileContent.className += ' show';
+    mobileContent.innerHTML = data.tab1.content;
+
+    Object.keys(data).forEach((id, index) => {
         const tabItem = data[id];
 
         // create the tab element and set its attributes
@@ -34,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newTabTitle.setAttribute('class', 'tab-title');
         newTabTitle.setAttribute('aria-selected', false);
         newTabTitle.setAttribute('aria-label', tabItem.title);
+        newTabTitle.setAttribute('tab-index', 0);
         newTabTitle.innerText = tabItem.title;
 
         // on click handler 
@@ -42,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // loop through it 
             // remove the active class
             // set aria-selected to false
-            Array.from(document.getElementsByClassName('tab')).forEach(element => {
+            Array.from(document.getElementsByClassName('tab')).forEach((element) => {
                 element.className = element.className.replace('active', '');
                 element.setAttribute('aria-selected', false);
             });
@@ -68,4 +72,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // default first tab to active
     document.getElementsByClassName('tab')[0].className += ' active';
+    document.getElementsByClassName('tab')[0].after(mobileContent);
 });
