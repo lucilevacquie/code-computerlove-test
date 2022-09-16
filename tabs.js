@@ -18,11 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("content");
     const mobileContent = document.getElementById("mobile-content");
 
-    // set the default content to the first tab content
-    content.innerHTML = data.tab1.content;
-
+    // Set the default content to the first tab content
+    // for mobile
     mobileContent.className += ' show';
     mobileContent.innerHTML = data.tab1.content;
+    // for laptop
+    content.innerHTML = data.tab1.content;
 
     Object.keys(data).forEach((id, index) => {
         const tabItem = data[id];
@@ -55,14 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
             newTab.className += ' active';
             newTab.setAttribute('aria-selected', true);
 
-            // MOBILE
-            // set tab content
+            // Set tab content
+            // for mobile
             mobileContent.className += ' show';
             mobileContent.innerHTML = tabItem.content;
             newTab.after(mobileContent);
-
-            // LAPTOP
-            // set tab content
+            // for laptop
             content.innerHTML = tabItem.content;
         })
 
@@ -70,7 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
         newTab.appendChild(newTabTitle);
     });
 
-    // default first tab to active
-    document.getElementsByClassName('tab')[0].className += ' active';
+    // Default first tab to active
+    // for mobile
     document.getElementsByClassName('tab')[0].after(mobileContent);
+    // for laptop
+    document.getElementsByClassName('tab')[0].className += ' active';
 });
