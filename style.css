@@ -1,47 +1,81 @@
 body {
   margin: 0;
+  background-color: #f3f5f6;
+  color: #1b3f6b;
 }
 
 .container {
-  margin: 8px;
-  padding: 16px;
-  border: 1px solid lightslategray;
+  background-color: white;
+  margin: 16px;
 }
 
 #tab-wrapper {
-  display: inline-flex;
-  flex-wrap: wrap;
+  width: 100%;
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .tab {
   padding: 16px;
+  background-color: #e3e8ec;
   border-top: 2px solid transparent;
-}
-
-.tab:hover {
-  background-color: lightgray;
+  font-weight: bold;
 }
 
 .tab.active {
-  border-top: 2px solid teal;
-  background-color: lightblue;
+  border-top: 2px solid #37b2b2;
+  border-bottom: 0.5px solid #e3e8ec;
+  background-color: white;
 }
 
-.content {
+.mobile-content {
+  display: none;
+  padding: 16px;
+}
+
+.mobile-content.show {
+  display: block;
+}
+
+#content-wrapper {
   display: none;
 }
 
-.content.active {
-  display: block;
-  padding: 0 16px;
+/* if device >= 768px */
+@media only screen and (min-width: 768px) {
+  #tab-wrapper {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .tab-title {
+    border-top: 2px solid transparent;
+    font-weight: bold;
+  }
+
+  .tab.active {
+    border-bottom: 0;
+  }
+
+  .mobile-content {
+    display: none !important;
+  }
+
+  #content-wrapper {
+    display: block;
+    border-top: 0.5px solid #e3e8ec;
+    padding: 0 16px 2px 16px;
+  }
 }
 
 /* if device >= 1024px */
 @media only screen and (min-width: 1024px) {
   .container {
-    max-width: 80rem;
-    margin: 8px auto;
+    max-width: 60rem;
+    margin: auto;
   }
 }
